@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeShow Foods Delivery</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% import "macros/list_item.html" as list_item %}
 
-    <h1>Pagina inicial do site</h1>
+{% block top %}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                {{ site_name }}
+            </h1>
+            <h2 class="subtitle">
+                {{ site_subtitle }}
+            </h2>
+        </div>
+    </div>
+</section>
+{% endblock top %}
 
-</body>
-</html>
+{% block main %}
+<div class="columns">
+    {{ list_item.cards([1, 2, 3, 4]) }}
+</div>
+{% endblock main %}
