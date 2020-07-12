@@ -28,8 +28,8 @@ app.register_blueprints(...)
 
 ### add hooks
 
-@app.before_request(...)
-@app.error_handler(...)
+# @app.before_request(...)
+# @app.error_handler(...)
 
 ### Chamar outras factories
 
