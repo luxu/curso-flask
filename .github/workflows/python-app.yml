@@ -27,7 +27,11 @@ jobs:
     - name: Install dependencies
       run: |
        make install
-       
+
+    - name: Database Migrations
+      run: |
+       make init_db
+
     - name: Run tests
       run: |
        make test
